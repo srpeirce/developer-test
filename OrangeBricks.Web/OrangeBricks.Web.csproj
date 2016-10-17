@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -172,12 +173,15 @@
     <Compile Include="Attributes\OrangeBricksAuthorizeAttribute.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Offers\Builders\MyOffersViewModelBuilder.cs" />
     <Compile Include="Controllers\Offers\Builders\OffersOnPropertyViewModelBuilder.cs" />
     <Compile Include="Controllers\Offers\Commands\AcceptOfferCommand.cs" />
     <Compile Include="Controllers\Offers\Commands\AcceptOfferCommandHandler.cs" />
     <Compile Include="Controllers\Offers\Commands\RejectOfferCommand.cs" />
     <Compile Include="Controllers\Offers\Commands\RejectOfferCommandHandler.cs" />
+    <Compile Include="Controllers\Offers\MyOffersController.cs" />
     <Compile Include="Controllers\Offers\OffersController.cs" />
+    <Compile Include="Controllers\Offers\ViewModels\MyOffersViewModel.cs" />
     <Compile Include="Controllers\Offers\ViewModels\OffersOnPropertyViewModel.cs" />
     <Compile Include="Controllers\Property\Builders\MakeOfferViewModelBuilder.cs" />
     <Compile Include="Controllers\Property\Builders\MyPropertiesViewModelBuilder.cs" />
@@ -226,6 +230,18 @@
     <Compile Include="Migrations\201505101607236_AddFieldsToOffers.cs" />
     <Compile Include="Migrations\201505101607236_AddFieldsToOffers.Designer.cs">
       <DependentUpon>201505101607236_AddFieldsToOffers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610172015084_AddBuyerIdToOffers.cs" />
+    <Compile Include="Migrations\201610172015084_AddBuyerIdToOffers.Designer.cs">
+      <DependentUpon>201610172015084_AddBuyerIdToOffers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610172036021_AddedForeignKeyToOffer.cs" />
+    <Compile Include="Migrations\201610172036021_AddedForeignKeyToOffer.Designer.cs">
+      <DependentUpon>201610172036021_AddedForeignKeyToOffer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610181118034_MakeBuyerIdMandatoryForOffer.cs" />
+    <Compile Include="Migrations\201610181118034_MakeBuyerIdMandatoryForOffer.Designer.cs">
+      <DependentUpon>201610181118034_MakeBuyerIdMandatoryForOffer.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -291,6 +307,7 @@
     <Content Include="Views\Property\MakeOffer.cshtml" />
     <Content Include="Views\Offers\OnProperty.cshtml" />
     <None Include="Views\Account\UnAuthorized.cshtml" />
+    <Content Include="Views\MyOffers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -322,6 +339,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201505101607236_AddFieldsToOffers.resx">
       <DependentUpon>201505101607236_AddFieldsToOffers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610172015084_AddBuyerIdToOffers.resx">
+      <DependentUpon>201610172015084_AddBuyerIdToOffers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610172036021_AddedForeignKeyToOffer.resx">
+      <DependentUpon>201610172036021_AddedForeignKeyToOffer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610181118034_MakeBuyerIdMandatoryForOffer.resx">
+      <DependentUpon>201610181118034_MakeBuyerIdMandatoryForOffer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
