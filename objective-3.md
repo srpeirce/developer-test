@@ -9,7 +9,7 @@ I like the use of commands and handlers. This could be improved upon using a com
 At the moment the Controller that raises the commands is instantiating the commandhandler. The controller has too much knowledge of the
 command handlers and would mean changes to the controller if we added or changed the command handlers - this breaks Single Responsibility Principle.
 
-I would consider pulling splitting the project into different contexts (projects) - this would allow for a clearer seperation of concerns.
+I would consider splitting the project into different contexts (projects) - this would allow for a clearer seperation of concerns.
 * OrangeBricks.Offers.Domain
 * OrangeBricks.Offers.Commands
 * OrangeBricks.Offers.CommandHandlers
