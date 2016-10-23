@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace OrangeBricks.Web
@@ -12,6 +8,11 @@ namespace OrangeBricks.Web
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+                name:"BookViewing", 
+                url:"property/{propertyId}/viewings/book",
+                defaults: new { controller = "Viewings", action="Book" });
 
             routes.MapRoute(
                 name: "Default",
