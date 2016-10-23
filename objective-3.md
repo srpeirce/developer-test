@@ -10,6 +10,8 @@ At the moment the Controller that raises the commands is instantiating the comma
 command handlers and would mean changes to the controller if we added or changed the command handlers - this breaks Single Responsibility Principle.
 
 I would consider splitting the project into different contexts (projects) - this would allow for a clearer seperation of concerns.
+
+Offers Context consisting of:
 * OrangeBricks.Offers.Domain
 * OrangeBricks.Offers.Commands
 * OrangeBricks.Offers.CommandHandlers
