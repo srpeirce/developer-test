@@ -1,4 +1,5 @@
 # Objective-3
+Note: I edited this file directly in GitHub. For a production app I would of edited the file outside to keep a clean history of commits.
 
 ## Testing
 Acceptance and intergration tests should be considered.
